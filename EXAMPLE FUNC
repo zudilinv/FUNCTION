@@ -1,3 +1,9 @@
+//Чсло из строки
+function convertToInteger(str) {
+    const int = parseInt(str);
+    return int;
+  }
+///////////////////////////////
 //Выводит рандомно число от 0-9(10 не вкл.) floor-округляет число в меньшую сторону
 function randomWholeNum() {
   return Math.floor(Math.random() * 10);
@@ -9,4 +15,40 @@ function randomRange(myMin, myMax) {
   return number;
 }
 ///////////////////////////////
+//Тернарный оператор
+function checkEqual(a, b) {
+  return a === b ? "Equal" : "Not Equal";
+}
+///////////////////////////////
+//Тернарный оператор(несколько условий)
+function checkSign(num) {
+  return (num > 0) ? "positive" 
+    : (num < 0) ? "negative" 
+    : "zero";
+}
+///////////////////////////////
+//Выводит [1, 2, 3, 4, 5], при n=5; .unshift(n)-выведет[5, 4, 3, 2, 1]
+function countup(n) {
+    if (n < 1) {
+      return [];
+    } else {
+      const countArray = countup(n - 1);
+      countArray.push(n);
+      return countArray;
+    }
+  }
+///////////////////////////////
+//Выводит массив от startNum до endNum 
+function rangeOfNumbers(startNum, endNum) {
+      if (startNum === endNum) {
+      return [startNum];
+    } else {
+      const countArray = rangeOfNumbers(startNum, endNum - 1);
+      countArray.push(endNum);
+      return countArray;
+    }
+};
+/////////////////////////////////
 //
+
+  
