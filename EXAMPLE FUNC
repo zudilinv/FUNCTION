@@ -1,0 +1,4 @@
+//Выводит рандомно число от 0-9(10 не вкл.) floor-округляет число в меньшую сторону
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
