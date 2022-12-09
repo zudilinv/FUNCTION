@@ -1,0 +1,16 @@
+//Развернуть слова на месте
+function reverseWords(str) {
+   str = str.split(" ");
+  var res = [];
+  for (var i = 0; i < str.length; i++){
+      res.push (str[i].split("").reverse().join(""));  
+  }  
+  return res.join(" ");
+}
+////////////////////////////////
+//ТО ЖЕ САМОЕ
+function reverseWords(str) {
+  return str.split(" ").map(
+          function(a) {return a.split("").reverse().join("")}
+         ).join(" ");
+}
